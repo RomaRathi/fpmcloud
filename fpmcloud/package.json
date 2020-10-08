@@ -1,5 +1,5 @@
 {
-  "name": "fpmcloud",
+  "name": "frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -13,13 +13,20 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.0.4",
+    "@angular/cdk": "~10.2.1-sha-b23d130e1",
     "@angular/common": "~10.0.4",
     "@angular/compiler": "~10.0.4",
     "@angular/core": "~10.0.4",
     "@angular/forms": "~10.0.4",
+    "@angular/material": "~10.2.1-sha-b23d130e1",
     "@angular/platform-browser": "~10.0.4",
     "@angular/platform-browser-dynamic": "~10.0.4",
     "@angular/router": "~10.0.4",
+    "@aspnet/signalr": "^1.1.4",
+    "@azure/msal-angular": "^1.1.1",
+    "@grapecity/spread-sheets": "^13.2.3",
+    "@grapecity/spread-sheets-angular": "^13.2.3",
+    "msal": "^1.4.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
