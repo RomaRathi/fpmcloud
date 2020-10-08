@@ -1,0 +1,18 @@
+<div>
+  <mat-toolbar color="primary">
+    <div>Clausion Cloud </div>
+    <button mat-raised-button *ngIf="connectionSuccess" (click)="broadcast()" style="margin:10px">Broadcast message</button>
+    <button mat-raised-button *ngIf="connectionSuccess" (click)="reportRedirect()" style="margin:10px">Report</button>
+    <div class="toolbar-spacer"></div>
+    <button mat-raised-button *ngIf="!loggedIn" (click)="login()">Login</button>
+    <button mat-raised-button *ngIf="loggedIn" (click)="logout()">Logout</button>
+  </mat-toolbar>
+  <mat-toolbar>
+    <strong> Message:</strong>&nbsp;&nbsp; <div>{{signalRService.bradcastedData}}</div> 
+    <div id="message" style="position: absolute; right: 45px;"></div>
+  </mat-toolbar>
+  <div style="float: left;">
+    <img src="/assets/images/cloud.PNG" alt="image">
+  </div>
+  <router-outlet *ngIf="!isIframe"></router-outlet>
+</div>

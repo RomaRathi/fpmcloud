@@ -1,0 +1,39 @@
+<mat-expansion-panel color="primary" style=" margin: 5px;" >
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Selections
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-form-field>
+    <input matInput placeholder="Dim00" value="1003" #dim>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Datatype" value="ACT" #datatype>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Year" value="2007" #year>
+  </mat-form-field>
+  <button mat-raised-button (click)="Validate(dim.value,year.value,datatype.value)" style="margin:10px">Send valid selections</button>
+  <br />
+  <!--Valid values for Dim00 are 1003<br />
+  Valid values for Datatype are ACT<br />
+  Valid values for Year are 2007<br /><br /><br />-->
+  <li *ngFor="let blob of blobNames; let i = index">
+    Report {{i + 1}}: <a href="" (click)="getReport(blob)">{{blob}}</a>
+  </li><br /><br />
+  <mat-progress-bar mode="indeterminate" *ngIf="IsWait"></mat-progress-bar>
+  <div id="info">{{data}}</div><br />
+</mat-expansion-panel>
+
+<mat-expansion-panel color="primary" style=" margin: 5px;" [expanded]="isExpanded">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Reports
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  
+  <div id="reportSheet" style="height:700px;"></div>
+  {{reportContent}}
+</mat-expansion-panel>
+
+

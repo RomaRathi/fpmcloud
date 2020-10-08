@@ -1,0 +1,17 @@
+.mat-expansion-panel {
+  background: #7b7b7b;
+  color: #000;
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: #73b92a;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background: #4f8223;
+}
+
+a:visited {
+  color: #73b92a;
+  text-decoration: none;
+}
